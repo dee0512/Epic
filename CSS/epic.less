@@ -1,0 +1,52 @@
+@default: #3498DB;
+.epic{
+  text-decoration: none;
+  font-size: 15px;
+  color: @default;
+  padding:.5em 2em;
+}
+.epic-style1{
+  border:1px solid @default;
+  position: relative;
+  &:before{
+    width: 100%;
+    background: @default;
+    position: absolute;
+    height: 0%;
+    content: '';
+    left: 0;
+    top:0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  &.bottom{
+    &:before{
+      top: auto;
+      bottom: 0;
+    }
+  }
+  &:hover{
+    &:before{
+      height: 100%;
+    }
+  }
+
+
+  &.left, &.right{
+    &:before {
+      width: 0%;
+      height: 100%;
+    }
+    &:hover{
+      &:before{
+        width: 100%;
+      }
+    }
+  }
+  &.right{
+    &:before{
+      left: auto;
+      right: 0;
+    }
+  }
+}

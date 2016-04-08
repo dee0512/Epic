@@ -1,0 +1,41 @@
+.epic {
+  text-decoration: none;
+  font-size: 15px;
+  color: #3498DB;
+  padding: .5em 2em;
+}
+.epic-style1 {
+  border: 1px solid #3498DB;
+  position: relative;
+}
+.epic-style1:before {
+  width: 100%;
+  background: #3498DB;
+  position: absolute;
+  height: 0%;
+  content: '';
+  left: 0;
+  top: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.epic-style1.bottom:before {
+  top: auto;
+  bottom: 0;
+}
+.epic-style1:hover:before {
+  height: 100%;
+}
+.epic-style1.left:before,
+.epic-style1.right:before {
+  width: 0%;
+  height: 100%;
+}
+.epic-style1.left:hover:before,
+.epic-style1.right:hover:before {
+  width: 100%;
+}
+.epic-style1.right:before {
+  left: auto;
+  right: 0;
+}
